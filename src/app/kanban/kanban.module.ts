@@ -6,10 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule, MatButtonToggleModule } from '@angular/material';
+import { BoardListComponent } from './board-list/board-list.component';
+import { BoardComponent } from './board/board.component';
+import { BoardDialogComponent } from './dialogs/board-dialog.component';
+import { TaskDialogComponent } from './dialogs/task-dialog.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [BoardListComponent, BoardComponent, BoardDialogComponent, TaskDialogComponent],
   imports: [
     CommonModule,
     KanbanRoutingModule,
@@ -18,6 +22,7 @@ import { MatDialogModule, MatButtonToggleModule } from '@angular/material';
     DragDropModule,
     MatDialogModule,
     MatButtonToggleModule
-   ]
+   ],
+  entryComponents: [BoardDialogComponent, TaskDialogComponent]
 })
 export class KanbanModule { }
